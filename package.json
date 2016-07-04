@@ -1,0 +1,16 @@
+{
+  "name": "object-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha -C -R spec spec/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "jshint": "^2.9.2",
+    "mocha": "^2.5.3"
+  }
+}
