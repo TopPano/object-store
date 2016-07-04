@@ -4,6 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
+    "postinstall": "cd aws-wrapper; npm install",
     "test": "mocha -C -R spec spec/"
   },
   "author": "",
