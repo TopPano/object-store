@@ -12,9 +12,9 @@ describe('Object Store', function() {
 
   it('should create a new object in the store', function(done) {
     var key = ['posts', 'aad2d60bb2d54400', 'SHARDING', 'pano', 'src', '2016-07-01', 'test.jpg'];
-    var file = fs.readFileSync('./fixture/1.jpg');
+    var file = fs.readFileSync(__dirname + '/fixtures/1.jpg');
     store.create(key, file, function(err, result) {
-      assert(err);
+      if (err) { return done(err); }
       var regex = /(posts)\/(aad2d60bb2d54400)\/([a-z0-9]{4})\/(pano)\/(src)\/([0-9-]+\/([a-z.]+))/;
       assert(result['Key'].match(regex), true);
       done();
